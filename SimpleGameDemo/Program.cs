@@ -1,12 +1,28 @@
-﻿using System;
-
-namespace SimpleGameDemo
+﻿namespace SimpleGameDemo
 {
-    class Program
+    using System;
+
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Random generator = new Random();
+            int generatedNumber = generator.Next(10);
+
+            for (int tryIdx = 1; tryIdx <= 3; tryIdx = tryIdx + 1)
+            {
+                Console.WriteLine("Introduceti numar");
+                string input = Console.ReadLine();
+                int userNumber = Convert.ToInt32(input);
+
+                if (generatedNumber == userNumber)
+                {
+                    Console.WriteLine("Ati ghicit numar! Nr incercari " + tryIdx);
+                    return;
+                }
+            }
+
+            Console.WriteLine("Nu ati ghicit. Numarul este: " + generatedNumber);
         }
     }
 }

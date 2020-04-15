@@ -20,6 +20,15 @@
                     Console.WriteLine("Ati ghicit numar! Nr incercari " + tryIdx);
                     return;
                 }
+
+                if (generatedNumber > userNumber)
+                {
+                    Console.WriteLine("Nr mai mare! ");
+                }
+                else
+                {
+                    Console.WriteLine("Nr mai mic!");
+                }
             }
 
             Console.WriteLine("Nu ati ghicit. Numarul este: " + generatedNumber);
